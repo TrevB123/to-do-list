@@ -51,7 +51,7 @@ function addTask() {
 listContainer.addEventListener("click", function(e){
 
 /* This line detects if the target of the click was the 'li' tag and if so, toggles to the 'checked' (green tick icon)... */
-    if(e.target.tagName === "li"){
+    if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
 
 /* This line calls the 'saveData()' function which starts on line 65 of this doc and will ensure that each time an item is ticked, this will be saved */
@@ -59,7 +59,7 @@ listContainer.addEventListener("click", function(e){
     }
 
 /* If the target is not 'li' tag, but rather the 'span' tag which contains the cross icon, then this part of the script removes the element instead. Obviously if neither the 'li' or 'span' tags are clicked then nothing happens as false will be returned in all other cases */
-    else if(e.target.tagName === "span"){
+    else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
 
 /* This line calls the 'saveData()' function which starts on line 65 of this doc and will ensure that each time an item is deleted, it will be removed from the locally saved items */
@@ -76,7 +76,7 @@ function saveData(){
 
 /* This function retrieves the list items that are saved to the local browser storage */
 function showTask() {
-    listContainer.innerHTML = localStorage.getitem("data");
+    listContainer.innerHTML = localStorage.getItem("data");
 }
 
 /* This line ensures that the saved local list items that are saved to the local browser storage are retrieved for display */
