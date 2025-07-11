@@ -1,0 +1,46 @@
+/* Global Styles */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* style the backgroudn container */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* style the to-do-list box with rounded corners and white background */
+.to-do-app {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* style the to-do-list title text */
+.to-do-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* style the to-do-list title icon */
+.to-do-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
