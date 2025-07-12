@@ -1,3 +1,4 @@
+
 /* This line sets up the get element by ID in the HTML file
 The const declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.
 The variable name is set here as 'inputBox' and the element ID is the ID set in the HTML file.
@@ -18,12 +19,21 @@ function addTask() {
         alert("You must write something here!");
     }
 
-/* This second part of the 'if, else' function is saying for anything else i.e. there is a value in the 'input-box' field then the first line creates a new list (li) item, which is stored in the li variable... */ 
-    else {
-        let li = document.createElement("li");
+/* This second part of the 'if, else' function is saying for anything else i.e. there is a value in the 'input-box' field then the first line creates a new list (li) item, which is stored in the li variable... */
+    else {   let li = document.createElement("li");
 
 /* Then this line sets the innerHTML of the list element to be equal to the value of the const variable 'inputBox', which takes the current value from the 'input-box' field. */
         li.innerHTML = inputBox.value;
+
+/* Check if the input already exists in the array */
+        const listItems = document.querySelectorAll("#list-container li");
+        const array = Array.from(listItems, item => item.textContent);
+        
+        if (array.includes(inputBox.value + "\u00d7")) {
+        alert("That text already exists. Please enter a different text string.");
+        }
+
+        console.log(array)
 
 /* This line identifies the 'listContainer' variable defined above in this file, which is related to the 'list-container' id in the HTML document, and it adds a new child item to the list (li) - hence you could go on forever adding new child items unless you set a limit */
         listContainer.appendChild(li);
@@ -81,3 +91,4 @@ function showTask() {
 
 /* This line ensures that the saved local list items that are saved to the local browser storage are retrieved for display */
 showTask();
+
