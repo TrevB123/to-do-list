@@ -11,7 +11,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("/images/tidydeskbg.jpg");
+    background-image: url("../images/tidydeskbg.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
