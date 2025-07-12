@@ -6,22 +6,45 @@
     box-sizing: border-box;
 }
 
-/* style the backgroudn container */
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("/images/tidydeskbg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-overlay {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8));
+}
+
+/* style the container */
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
-    padding: 10px;
+    padding: 20px;
 }
 
 /* style the to-do-list box with rounded corners and white background */
 .to-do-app {
     width: 100%;
     max-width: 600px;
+    min-width: 375px;
     background: white;
     margin: 100px auto 20px;
-    padding: 40px 30px 70px;
+    padding: 10px 30px 70px;
     border-radius: 10px;
+    box-shadow: 20px rgb(0, 0, 0);
+}
+
+/* centre the header image on the form */
+.hero-image {
+    display: flex;
+    justify-content: center;
 }
 
 /* style the to-do-list title text */
@@ -30,6 +53,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 /* style the to-do-list title icon */

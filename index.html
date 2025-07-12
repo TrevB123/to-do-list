@@ -16,18 +16,30 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <!-- add in the full screen background coffee table image -->
+        <div class="bg">
+        <!-- add in the color overlay to knock back the background image a little -->
+        <div class="bg-overlay">
+        <!-- add the container for the to do list app -->  
         <div class="container">
+            <!-- code that displays the list on the front end -->
             <div class="to-do-app">
-                <h2>My personal to-do list <img src="images/icon.png"></h2>
+                <div class="hero-image">
+                <img src="/images/todoimage.jpg">
+                </div>
+                <h2>My personal to-do list</h2>
+                <!-- add the input field -->
                 <div class="row">
                     <input type="text" id="input-box" placeholder="Add a new item to the list">
                     <button onclick="addTask()">ADD</button>
                 </div>
+                <!-- build the added list items -->
                 <ul id="list-container">
                 <!-- list via Javascript drops in here -->
                 </ul>
             </div>
+        </div>
+        </div>
         </div>
 
 
