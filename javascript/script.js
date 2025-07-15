@@ -31,6 +31,8 @@ function addTask() {
         
         if (array.includes(inputBox.value + "\u00d7")) {
         alert("That text already exists. Please enter a different text string.");
+        document.getElementById('input-box').value = '';
+        return;
         }
 
         console.log(array)
